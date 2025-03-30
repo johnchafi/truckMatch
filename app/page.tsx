@@ -2,37 +2,12 @@ import Link from "next/link"
 import { ArrowRight, Package, Truck } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-
+import Footer from "@/components/footer"
+import Header from "@/components/header"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="border-b">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-            <Truck className="h-6 w-6" />
-            <span>TruckMatch</span>
-          </Link>
-          <nav className="hidden md:flex gap-6">
-            <Link href="#features" className="text-sm font-medium hover:underline underline-offset-4">
-              Features
-            </Link>
-            <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4">
-              How It Works
-            </Link>
-            <Link href="#pricing" className="text-sm font-medium hover:underline underline-offset-4">
-              Pricing
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Link href="/login" className="text-sm font-medium hover:underline underline-offset-4">
-              Log In
-            </Link>
-            <Button asChild>
-              <Link href="/signup">Sign Up</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
@@ -42,7 +17,7 @@ export default function Home() {
                   Connect Shippers with Available Truck Space
                 </h1>
                 <p className="text-muted-foreground md:text-xl">
-                  TruckMatch helps businesses find available truck space for their deliveries and helps carriers fill
+                  TruckMatch helps businesses or individuals find available truck space for their deliveries and helps carriers fill
                   empty space on return journeys.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -58,7 +33,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <img
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/camion.jpg"
                   alt="Platform Preview"
                   className="rounded-lg object-cover aspect-video"
                   width={600}
@@ -107,26 +82,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="border-t py-6 md:py-8">
-        <div className="container flex flex-col items-center justify-center gap-4 px-4 md:px-6 md:flex-row">
-          <div className="flex items-center gap-2">
-            <Truck className="h-5 w-5" />
-            <span className="font-semibold">TruckMatch</span>
-          </div>
-          <nav className="flex gap-4 sm:gap-6">
-            <Link href="#" className="text-xs hover:underline underline-offset-4">
-              Terms of Service
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-xs hover:underline underline-offset-4">
-              Contact Us
-            </Link>
-          </nav>
-          <div className="md:ml-auto text-xs text-muted-foreground">© 2025 TruckMatch. All rights reserved.</div>
-        </div>
-      </footer>
+     <Footer />
     </div>
   )
 }

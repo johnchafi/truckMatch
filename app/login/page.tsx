@@ -8,7 +8,8 @@ import { Label } from "@/components/ui/label"
 
 export default function Login() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-muted/40 p-4">
+    <div className="flex min-h-screen items-center justify-center bg-muted/40 p-4 bg-gray-400" 
+    >
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-2 text-center">
           <div className="flex justify-center">
